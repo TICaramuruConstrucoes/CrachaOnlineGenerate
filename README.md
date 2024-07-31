@@ -26,7 +26,7 @@ Certifique-se de ter os seguintes pacotes instalados:
 - `pandas`
 - `qrcode`
 
-!!Você pode instalar os pacotes necessários usando pip!!
+:bulb: Você pode instalar os pacotes necessários usando pip
 
 ## Uso no Desktop
 
@@ -48,4 +48,4 @@ Execute o seguinte comando para criar um arquivo executável único (.exe) que i
 pip install pyinstaller
 ```
 
-Após a execução do comando, o executável será gerado na pasta dist/. Você pode distribuir este arquivo e executá-lo diretamente em qualquer máquina que tenha o sistema operacional compatível.
+Após a execução do comando, o executável será gerado na pasta `dist/.` Você pode distribuir este arquivo e executá-lo diretamente em qualquer máquina que tenha o sistema operacional compatível.
