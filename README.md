@@ -13,9 +13,9 @@ Um aplicativo para gerar códigos QR para crachás de funcionários usando Tkint
     - `CrachaOnlineView.py`: Interface gráfica para entrada e exibição de QR Codes.
   - `viewModel/`: Contém a lógica de controle.
     - `CrachaOnlineViewModel.py`: Lógica para geração de QR Code e tratamento de erros.
+  - `CrachaOnlineClient.py`: Arquivo principal que inicia a aplicação.
 - `resources/`: Contém arquivos de recursos, como planilhas Excel.
 - `assets/`: Contém ícones e outros recursos estáticos.
-- `src/view/CrachaOnlineAPP.py`: Arquivo principal que inicia a aplicação.
 
 ## Requisitos :mag:
 
