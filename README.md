@@ -1,6 +1,6 @@
 # CrachaOnline
 
-Um aplicativo para gerar códigos QR para crachás de funcionários usando Tkinter para a interface gráfica e `qrcode` para gerar os códigos QR.
+Aplicativo para gerar códigos QR para crachás de funcionários usando python.
 
 ## Estrutura do Projeto :wrench:
 
