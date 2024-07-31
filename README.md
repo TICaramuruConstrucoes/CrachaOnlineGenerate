@@ -57,3 +57,6 @@ pyinstaller --onefile --windowed --icon=assets/COIcon.ico src/CrachaOnlineClient
 ```
 
 Após a execução do comando, o executável será gerado na pasta `dist/.` Você pode distribuir este arquivo e executá-lo diretamente em qualquer máquina que tenha o sistema operacional compatível.
+
+![image](https://github.com/user-attachments/assets/c2298ed5-c03b-4dfe-a46d-b4f06a6b8d84)
+
