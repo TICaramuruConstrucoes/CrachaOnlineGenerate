@@ -2,7 +2,7 @@
 
 Um aplicativo para gerar códigos QR para crachás de funcionários usando Tkinter para a interface gráfica e `qrcode` para gerar os códigos QR.
 
-## Estrutura do Projeto
+## Estrutura do Projeto :wrench:
 
 - `src/`: Contém o código fonte do projeto.
   - `model/`: Contém as classes do modelo.
@@ -17,18 +17,16 @@ Um aplicativo para gerar códigos QR para crachás de funcionários usando Tkint
 - `assets/`: Contém ícones e outros recursos estáticos.
 - `src/view/CrachaOnlineAPP.py`: Arquivo principal que inicia a aplicação.
 
-## Requisitos
+## Requisitos :mag:
 
 Certifique-se de ter os seguintes pacotes instalados:
 
 - `tkinter`
-- `Pillow`
+- `pillow`
 - `pandas`
 - `qrcode`
 
-:bulb: Você pode instalar os pacotes necessários usando pip
-
-## Uso no Desktop
+## Uso no Desktop :computer:
 
 Para criar um executável do aplicativo que pode ser executado diretamente no seu desktop, você pode usar o `pyinstaller`. Siga os passos abaixo:
 
@@ -45,7 +43,7 @@ pip install pyinstaller
 Execute o seguinte comando para criar um arquivo executável único (.exe) que inclui um ícone personalizado e não exibe um terminal ao ser executado:
 
 ```bash
-pip install pyinstaller
+pyinstaller --onefile --windowed --icon=assets/COIcon.ico src/CrachaOnlineClient.py
 ```
 
 Após a execução do comando, o executável será gerado na pasta `dist/.` Você pode distribuir este arquivo e executá-lo diretamente em qualquer máquina que tenha o sistema operacional compatível.
