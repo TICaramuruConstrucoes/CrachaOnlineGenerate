@@ -1,17 +1,21 @@
+# View/CrachaOnlineView.py
 import os
 import tkinter as tk
 from tkinter import messagebox
 from PIL import Image, ImageTk
-from src.model.CrachaOnlineFacade import ModelFacade
 
 
 class CrachaOnlineView:
-    def __init__(self, root):
+    def __init__(self, root, view_model):
+        self.view_model = view_model
         self.root = root
         self.root.title("Crachá Online - QRcode")
         self.root.configure(bg='#09933E')  # Definir a cor de fundo da janela principal
 
-        self.icon_path = r'\assets\COIcon.ico'
+        base_dir = os.path.dirname(__file__)
+        assets_dir = os.path.abspath(os.path.join(base_dir, '..', '..', 'assets'))
+        self.icon_path = os.path.join(assets_dir, "COIcon.ico")
+
         if os.path.exists(self.icon_path):
             root.iconbitmap(self.icon_path)
         else:
@@ -51,14 +55,11 @@ class CrachaOnlineView:
 
     def generate_qrcode(self):
         code_to_search = self.entry.get()
-        if code_to_search:
-            # Gerar o QR code
-            ModelFacade('Crachas.xls', 'Sheet1').generate_qrcode(code_to_search)
-
-            # Exibir a imagem do QR code
-            self.show_qr_code_image()
+        self.view_model.generate_qr_code(code_to_search)
+        if self.view_model.error_message:
+            messagebox.showwarning("Erro", self.view_model.error_message)
         else:
-            messagebox.showwarning("Entrada Inválida", "Por favor, insira um código.")
+            self.show_qr_code_image()
 
     def show_qr_code_image(self):
         # Caminho para a imagem
@@ -74,4 +75,3 @@ class CrachaOnlineView:
             self.image_label.image = photo
         else:
             messagebox.showerror("Erro", "Imagem QR code não encontrada.")
-

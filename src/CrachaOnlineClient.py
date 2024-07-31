@@ -1,11 +1,14 @@
 import tkinter as tk
-
-from src.view.CrachaOnlineView import CrachaOnlineView
+from view.CrachaOnlineView import CrachaOnlineView
+from viewModel.CrachaOnlineViewModel import CrachaOnlineViewModel
 
 
 def main():
     root = tk.Tk()
-    CrachaOnlineView(root)
+
+    view_model = CrachaOnlineViewModel()
+    view = CrachaOnlineView(root, view_model)
+
     root.mainloop()
 
 

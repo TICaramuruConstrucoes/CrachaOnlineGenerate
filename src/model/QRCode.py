@@ -1,10 +1,7 @@
 import qrcode
-import datetime
 
 
 class QRCode:
-    __url = ""
-
     def __init__(self):
         self.qr = qrcode.QRCode(
             version=3,
@@ -26,14 +23,12 @@ class QRCode:
     def get_url(self, row):
         data = (
                 "https://ticaramuruconstrucoes.github.io/?"
-                + "&Cracha=" + str(row[23])
+                + "&Cracha=" + str(row[0])
                 + "&Nome=" + row[1].replace(" ", "%20")
-                + "&CPF=" + str(row[24])
-                + "&RG=" + str(row[7])
-                + "&Nascimento=" + str(row[18].strftime('%Y-%m-%d'))
-                + "&Sexo=" + ('Masculino' if row[14] == 'M' else 'Feminino')
+                + "&CPF=" + str(row[2])
+                + "&RG=" + str(row[3])
+                + "&Nascimento=" + str(row[4].strftime('%Y-%m-%d'))
+                + "&Sexo=" + ('Masculino' if row[5] == 'M' else 'Feminino')
         )
-
-        print(data)
 
         return data
