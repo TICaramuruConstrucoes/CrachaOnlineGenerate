@@ -4,18 +4,26 @@ Aplicativo para gerar códigos QR para crachás de funcionários usando python.
 
 ## Estrutura do Projeto :wrench:
 
-- `src/`: Contém o código fonte do projeto.
-  - `model/`: Contém as classes do modelo.
-    - `CrachaOnlineFacade.py`: Facade para gerar o QR Code.
-    - `ExcelTable.py`: Manipulação de dados a partir de uma planilha Excel.
-    - `QRCode.py`: Geração e salvamento do QR Code.
-  - `view/`: Contém a interface gráfica do usuário.
-    - `CrachaOnlineView.py`: Interface gráfica para entrada e exibição de QR Codes.
-  - `viewModel/`: Contém a lógica de controle.
-    - `CrachaOnlineViewModel.py`: Lógica para geração de QR Code e tratamento de erros.
-  - `CrachaOnlineClient.py`: Arquivo principal que inicia a aplicação.
-- `resources/`: Contém arquivos de recursos, como planilhas Excel.
-- `assets/`: Contém ícones e outros recursos estáticos.
+`src/`
+│
+├── `model/`
+│ ├── `CrachaOnlineFacade.py` # Facade para gerar o QR Code.
+│ ├── `ExcelTable.py` # Manipulação de dados a partir de uma planilha Excel.
+│ └── `QRCode.py` # Geração e salvamento do QR Code.
+│
+├── view/
+│ └── CrachaOnlineView.py # Interface gráfica para entrada e exibição de QR Codes.
+│
+├── viewModel/
+│ └── CrachaOnlineViewModel.py # Lógica para geração de QR Code e tratamento de erros.
+│
+└── CrachaOnlineClient.py # Arquivo principal que inicia a aplicação.
+│
+resources/
+│ └── Crachas.xlsx # Arquivo de planilha com dados dos funcionários.
+│
+assets/
+└── COIcon.ico # Ícone do aplicativo.
 
 ## Requisitos :mag:
 
